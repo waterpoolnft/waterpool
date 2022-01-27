@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en-us" style="width: 100%;height: 100%">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>WaterPool</title>
+  </head>
+  <body style="text-align: center; width: 100%; height: 100%; padding: 0px; margin: 0px" >
+    <canvas id="unity-canvas" style="width: 100%; height: 100%; background: #231F20"></canvas>
+    <script src="Build/waterpool.asm.loader.js"></script>
+    <script>
+      createUnityInstance(document.querySelector("#unity-canvas"), {
+        dataUrl: "Build/waterpool.data.gz",
+        frameworkUrl: "Build/waterpool.asm.framework.js.gz",
+        codeUrl: "Build/waterpool.asm.js.gz",
+        memoryUrl: "Build/waterpool.asm.mem.gz",
+        streamingAssetsUrl: "StreamingAssets",
+        productName: "WaterPool",
+        productVersion: "1.0",
+        // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
+        // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
+      });
+    </script>
+  </body>
+</html>
